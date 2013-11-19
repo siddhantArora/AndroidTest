@@ -37,7 +37,7 @@ public final class ZanoxConnect {
 	private static ZanoxConnect zanoxConnect;
 
 	/** The utm available. */
-	public static boolean utmAvailable = false;
+	public static boolean utmAvailable =false;
 
 	/**
 	 * Instantiates a new zanoxConnect.
