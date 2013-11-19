@@ -80,8 +80,8 @@
 		<!-- Now set it to read-only, as we don't want people accidentally 
 		     editing the wrong one. NOTE: This step is unnecessary, but I do
 		     it so the developers remember that this is not the original file. -->
-		<chmod file="${config-target-path}/Config.java" perm="-w"/>
-		<attrib file="${config-target-path}/Config.java" readonly="true"/>
+		<!--chmod file="${config-target-path}/Config.java" perm="-w"/>
+		<attrib file="${config-target-path}/Config.java" readonly="true"/-->
 
 		<record name="logfile.txt" action="stop"/>
 
