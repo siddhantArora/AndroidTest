@@ -76,7 +76,8 @@
 			   expression="/manifest/application/activity[intent-filter/action/@android:name='android.intent.action.MAIN']/@android:name"
 			   output="manifest.main" />
 		    <echo level="info">Restart main activity ${manifest.package}/${manifest.main}</echo>
-		    <exec executable="${android.platform.tools.dir}/adb">
+		    <echo level="info">SDK DIR PATH ${sdk.dir}</echo>
+		    <exec executable="${sdk.dir}/adb">
 			<arg value="shell"/>
 			<arg value="am"/>
 			<arg value="start"/>
