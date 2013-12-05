@@ -76,7 +76,7 @@
 			   output="manifest.main" />
 		    <echo level="info">Restart main activity ${manifest.package}/${manifest.main}</echo>
 		    <echo level="info">SDK DIR PATH ${sdk.dir}</echo>
-		    <exec executable="${sdk.dir}/adb">
+		    <exec executable="${sdk.dir}/platform-tools/adb">
 			<arg value="shell"/>
 			<arg value="am"/>
 			<arg value="start"/>
