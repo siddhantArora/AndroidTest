@@ -72,19 +72,29 @@
 			   expression="/manifest/@package"
 			   output="manifest.package" />
 		    <xpath input="AndroidManifest.xml"
-			   expression="/manifest/application/activity[intent-filter/action/@android:name='android.intent.action.MAIN']/@android:name"
+			   expression="/manifest/application/activity[intent-filter/action/@android:name='android.intent.action.MAIN']/		@android:name"
 			   output="manifest.main" />
+		   <xpath input="AndroidManifest.xml" 
+			   expression="/manifest/application/receiver[intent-filter/action/@android:name='com.android.vending.INSTALL_REFERRER']/@android:name"
+			   output="receiver.main">
 		    <echo level="info">Restart main activity ${manifest.package}/${manifest.main}</echo>
+		    <echo level="info">Receiver activity ${manifest.package}/${receiver.main}</echo>
 		    <echo level="info">SDK DIR PATH ${sdk.dir}</echo>
 		    <exec executable="${sdk.dir}/platform-tools/adb">
 			<arg value="shell"/>
 			<arg value="am"/>
-			<arg value="start"/>
+			<arg value="broadcast"/>
+			<!--arg value="start"/-->
 			<arg value="-S"/>
 			<arg value="-a"/>
-			<arg value="android.intent.action.MAIN"/>
+			<arg value="com.android.vending.INSTALL_REFERRER"/>
+			<!--arg value="android.intent.action.MAIN"/-->
 			<arg value="-n"/>
-			<arg value="${manifest.package}/${manifest.main}"/>
+			<arg value="${manifest.package}/${receiver.main}"/>
+			<arg value="--es"/>
+			<arg value="referrer"/>
+			<arg value="utm_campaign=product&utm_source=google&utm_medium=banner&utm_content=1234"/>
+			<!--arg value="${manifest.package}/${manifest.main}"/-->
 		    </exec>
 		</target>
     <import file="custom_rules.xml" optional="true" />
