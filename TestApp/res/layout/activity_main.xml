@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/in_app_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="85dp"
+        android:onClick="inAppTransactionClick"
+        android:text="In App Transaction" 
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/advertiserOrderIDtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="58dp"
+        android:textSize="14sp"
+        android:width="70dip" 
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:paddingBottom="10sp"
+        android:layout_marginBottom="20dip"
+        android:text=" CID"/>
+
+    <EditText
+        android:id="@+id/advertiserOrderIDEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/advertiserOrderIDtextView"
+        android:layout_alignLeft="@+id/in_app_transaction"
+        android:ems="10"
+        android:paddingBottom="10sp">
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView android:id="@+id/currencyCodeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_below="@+id/advertiserOrderIDtextView"
+        android:textSize="14sp"
+        android:width="70dip"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:text="Advertiser Cust ID"
+        android:layout_marginBottom="20dip" />
+    
+    <EditText 
+        android:id="@+id/currencyCodeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/currencyCodeTextView"
+        android:layout_alignLeft="@+id/in_app_transaction"
+        android:ems="10"
+        android:paddingBottom="10sp"/>
+    
+    <TextView android:id="@+id/salePurchaseAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_below="@+id/currencyCodeTextView"
+        android:textSize="13sp"
+        android:width="70dip"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:paddingBottom="10dip"
+        android:text="Currency"/>
+
+    <EditText
+        android:id="@+id/salePurchaseAmountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/salePurchaseAmountTextView"
+        android:layout_alignBottom="@+id/salePurchaseAmountTextView"
+        android:layout_alignLeft="@+id/currencyCodeEditText"
+        android:ems="10"
+        android:paddingBottom="10sp" />
+
+    <TextView
+        android:id="@+id/reviewNoteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/reviewNoteEditText"
+        android:layout_alignBottom="@+id/reviewNoteEditText"
+        android:layout_alignLeft="@+id/salePurchaseAmountTextView"
+        android:text="TotalPrice"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:width="70dip" />
+
+    <EditText
+        android:id="@+id/reviewNoteEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/salePurchaseAmountEditText"
+        android:layout_below="@+id/salePurchaseAmountEditText"
+        android:layout_marginTop="15dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reviewNoteTextView"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="17dp"
+        android:text="Review"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:width="70dip" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/editText1"
+        android:ems="10"
+        android:paddingBottom="10sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignLeft="@+id/textView2"
+        android:text="Session"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:width="70dip" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reviewNoteEditText"
+        android:layout_below="@+id/reviewNoteEditText"
+        android:ems="10"
+        android:paddingBottom="10sp" />
+
+</RelativeLayout>
